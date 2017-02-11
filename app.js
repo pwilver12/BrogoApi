@@ -1,16 +1,23 @@
+'use strict';
+// TODO: Fix es6 rendering issues
 import cors from 'cors';
 import express from 'express';
+import path from 'path';
 
-import routes from './routes/routes'
+import { router as apiRoutes } from './routes/api';
 import { API_VERSION } from './variables/constants';
 
 // INIT
 const app = express();
 
 // APP CONFIG
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(cors());
-app.port = process.env.PORT || 8080;
+// static files
+app.use(express.static(path.join(__dirname, './build')));
+// port to listen on
+app.set('port', process.env.PORT || 8080);
 
 // ROUTES
 app.get('/', (req, res) => {
@@ -20,7 +27,9 @@ app.get('/', (req, res) => {
   });
 });
 
-app.use(`/api/${API_VERSION}`, routes);
+app.use(`/api/${API_VERSION}`, apiRoutes);
 
 // RUN
-app.listen(app.port);
+app.listen(app.get('port'), () => {
+  console.log(`Listening on port ${app.get('port')}`);
+});
