@@ -2,7 +2,7 @@
 
 ```
 npm install
-node start
+npm start
 ```
 
 ### Current Routes
