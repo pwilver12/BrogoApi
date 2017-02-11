@@ -5,7 +5,6 @@ const babelify = require('babelify');
 const del = require('del');
 const source = require('vinyl-source-stream');
 const buffer = require('vinyl-buffer');
-const browserifyEjs = require('browserify-ejs');
 
 const browserSync = require('browser-sync').create();
 
@@ -45,7 +44,6 @@ gulp.task('sass', ['clean:css'], () =>
   gulp.src(paths.src.sass)
   .pipe($$.sass({
     includePaths: [
-      paths.hubspotPublicAssetsRoot,
       paths.breakpointStylesheets
     ]
   })).on('error', $$.sass.logError)
@@ -63,7 +61,6 @@ gulp.task('js', ['clean:js'], () =>
     extensions: ['.js'],
     debug: true
   })
-  .transform(browserifyEjs)
   .transform(babelify)
   .on('error', (err) => {
     $$.util.log(err);
