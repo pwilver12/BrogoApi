@@ -1,0 +1,20 @@
+{
+  "name": "BrogoApi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pwilver12/BrogoApi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pwilver12/BrogoApi/issues"
+  },
+  "homepage": "https://github.com/pwilver12/BrogoApi#readme"
+}
