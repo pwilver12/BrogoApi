@@ -7,7 +7,8 @@
     "node": "6.9.x"
   },
   "scripts": {
-    "start": "nodemon app.js"
+    "start:dev": "babel-node app.js",
+    "start": "nodemon --exec \"npm run start:dev\""
   },
   "repository": {
     "type": "git",

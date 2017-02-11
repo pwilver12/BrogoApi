@@ -11,4 +11,4 @@ router.route('/games')
     //
   });
 
-module.exports = router;
+export { router };
