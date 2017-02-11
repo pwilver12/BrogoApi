@@ -1,20 +1,23 @@
 {
-  "name": "BrogoApi",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "BrogoScoreKeeper",
+  "version": "0.1.0",
+  "description": "A score-keeping app for Brogo festivities",
+  "main": "./build/js/app.js",
+  "engines": {
+    "node": "6.9.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node build/js/app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pwilver12/BrogoApi.git"
+    "url": "git+https://github.com/pwilver12/BrogoScoreKeeper.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pwilver12/BrogoApi/issues"
+    "url": "https://github.com/pwilver12/BrogoScoreKeeper/issues"
   },
-  "homepage": "https://github.com/pwilver12/BrogoApi#readme"
+  "homepage": "https://github.com/pwilver12/BrogoScoreKeeper#readme",
+  "keywords": [],
+  "author": "Hatreeks Bergermon",
+  "license": "ISC"
 }
