@@ -5,7 +5,7 @@ import express from 'express';
 import path from 'path';
 
 import { router as apiRoutes } from './routes/api';
-import { API_VERSION } from './variables/constants';
+import { API_VERSION } from './src/js/variables/constants';
 
 // INIT
 const app = express();
