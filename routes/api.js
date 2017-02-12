@@ -11,4 +11,4 @@ router.route('/games')
     //
   });
 
-export { router };
+export { router as default };
