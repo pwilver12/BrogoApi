@@ -1,8 +1,6 @@
-'use strict';
-// TODO: Fix es6 rendering issues
 import cors from 'cors';
 import express from 'express';
-import path from 'path';
+// import path from 'path';
 
 import apiRoutes from './routes/api';
 import { API_VERSION } from './src/js/variables/constants';
@@ -11,11 +9,10 @@ import { API_VERSION } from './src/js/variables/constants';
 const app = express();
 
 // APP CONFIG
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'ejs');
+// app.set('views', path.join(__dirname, 'views'));
+// app.set('view engine', 'ejs');
+// app.use(express.static(path.join(__dirname, './build')));
 app.use(cors());
-// static files
-app.use(express.static(path.join(__dirname, './build')));
 
 // ROUTES
 app.get('/', (req, res) => {
