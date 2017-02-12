@@ -67,7 +67,7 @@ gulp.task('js', ['clean:js'], () =>
     this.emit('end');
   })
   .bundle()
-  .pipe(source('app.js'))
+  .pipe(source('bundle.js'))
   .pipe(buffer())
   .pipe($$.uglify())
   .pipe(gulp.dest(paths.dest.js))
