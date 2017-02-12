@@ -1,1 +1,1 @@
-web: node ./build/js/app.js
+web: ./bin/www
