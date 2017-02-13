@@ -2,7 +2,7 @@ import cors from 'cors';
 import express from 'express';
 
 import apiRoutes from './routes/api';
-import { API_VERSION } from './src/js/variables/constants';
+import { API_PATH } from './helpers/constants';
 
 // INIT
 const app = express();
@@ -15,6 +15,6 @@ app.get('/', (req, res) => {
   res.status(200).send('Hello World!');
 });
 
-app.use(`/api/${API_VERSION}`, apiRoutes);
+app.use(API_PATH, apiRoutes);
 
 export { app as default };
