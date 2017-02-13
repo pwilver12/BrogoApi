@@ -2,9 +2,9 @@
 import app from './../app';
 
 // port to listen on
-const port = process.env.PORT || 8080;
+app.port = process.env.PORT || 8080;
 
 // RUN
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+app.listen(app.port, () => {
+  console.log(`Listening on port ${app.port}`);
 });
