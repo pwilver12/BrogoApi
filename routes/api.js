@@ -7,10 +7,12 @@ router.route('/games')
   .get((req, res) => {
     // Filterable by team ID
     // Return games as json
+    res.json([]);
   })
   .post((req, res) => {
     // 201, return json for new game
     // Add new game to page listing immediately
+    res.status(201).json([]);
   });
 
 // Retrieve or delete single game
