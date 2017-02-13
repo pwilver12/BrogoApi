@@ -1,6 +1,8 @@
-const express = require('express');
+import express from 'express';
+import bodyParser from 'body-parser';
 
 const router = express.Router();
+const urlencode = bodyParser.urlencoded({ extended: true });
 
 // Retrieve all games/ add new game
 router.route('/games')
@@ -9,10 +11,15 @@ router.route('/games')
     // Return games as json
     res.json([]);
   })
-  .post((req, res) => {
+  .post(urlencode, (req, res) => {
     // 201, return json for new game
-    // Add new game to page listing immediately
-    res.status(201).json([]);
+    // Return new game data so that it can be added to page listing on success
+    const game = req.body;
+    if(!game.team_1 || !game.team_2 || !game.type || !game.diff) {
+      res.sendStatus(400);
+      return false;
+    }
+    res.status(201).json(game);
   });
 
 // Retrieve or delete single game
