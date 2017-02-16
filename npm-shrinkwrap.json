@@ -44,6 +44,11 @@
       "from": "bytes@2.4.0",
       "resolved": "https://registry.npmjs.org/bytes/-/bytes-2.4.0.tgz"
     },
+    "cheet.js": {
+      "version": "0.3.3",
+      "from": "cheet.js@latest",
+      "resolved": "https://registry.npmjs.org/cheet.js/-/cheet.js-0.3.3.tgz"
+    },
     "content-disposition": {
       "version": "0.5.2",
       "from": "content-disposition@0.5.2",
