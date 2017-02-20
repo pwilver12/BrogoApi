@@ -1,27 +1,24 @@
-# App to-dos
+# Notes
 
-## Components
+## TODO
+- Add "admin" layer using cheet.js
+- Create database schema
+
+### Components
 * Initial view (select Brogo)
-
 * Tournament Summary view: `/overview`
   * List of Teams
   * Table of current standings
-
 * Team Page view: `/team/:id`
   * List of games played
-
 * Game Details view: `/games/:id`
   * Game name
   * Team played
   * Score
   * Point Differential
-
 * "Log a Game" view: `/games/new`
-
 * "Create Tournament" view
-
 * "Add a team" view: `/teams/new`
-
 
 ## API Routes
 * Games
@@ -35,10 +32,21 @@
   * Add new team: `POST /api/v1/teams`
   * Delete team: `DELETE /api/v1/teams/:team_id`
 
-### Questions
-* Redis or Postgres?
-  * Redis: save team and game information as stringified JSON, then parse and do logic -- too messy?
-  * Better association between data tables: Teams, Games, join table between these -- more complex, though
+### Database
+* Teams table
+  * Name (string)
+  * Members (array)
 
+* Games table
+  * Type (string)
+  * Teams (array)
+  * Score (array)
+  * Winner (string)
+
+* TeamsGames join table
+  * Team ID
+  * Game ID
+
+### Questions
 * File structure
   * Folder name for 'helper' functions to use within app.js -- where should this live?
