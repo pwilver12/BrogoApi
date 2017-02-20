@@ -1,6 +1,6 @@
 # Notes
 
-## TODO
+## TODOS
 - Add "admin" layer using cheet.js
 - Create database schema
 
