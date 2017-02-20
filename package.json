@@ -26,10 +26,11 @@
     "cheet.js": "^0.3.3",
     "cors": "^2.8.1",
     "express": "^4.14.1",
+    "pg": "^6.1.2",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-router": "^3.0.2",
-    "redis": "^2.6.5"
+    "sequelize": "^3.30.2"
   },
   "devDependencies": {
     "babel": "^6.5.2",
