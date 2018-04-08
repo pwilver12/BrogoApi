@@ -4,7 +4,7 @@
   "description": "A score-keeping app for Brogo festivities",
   "main": "./app.js",
   "engines": {
-    "node": "6.9.x"
+    "node": "8.9.4"
   },
   "scripts": {
     "test": "mocha --compilers js:babel-core/register -w ./app.js ./test.js",
